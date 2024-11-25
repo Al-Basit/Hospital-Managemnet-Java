@@ -4,11 +4,8 @@ import javax.swing.UIManager;
 import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.FontUIResource;
 import java.awt.Color;
-import java.awt.Font;
 
-/**
- * Global theming settings for the application.
- */
+
 public class GlobalTheming {
     public static void applyGlobalTheming() {
         // Apply global colors
@@ -16,9 +13,9 @@ public class GlobalTheming {
         UIManager.put("info", new ColorUIResource(DesignConstants.SECONDARY_COLOR));
         UIManager.put("nimbusBase", new ColorUIResource(DesignConstants.PRIMARY_COLOR));
         UIManager.put("nimbusBlueGrey", new ColorUIResource(DesignConstants.SECONDARY_COLOR));
-        UIManager.put("nimbusFocus", new ColorUIResource(DesignConstants.ACCENT_COLOR));
+        UIManager.put("nimbusFocus", new ColorUIResource(DesignConstants.SUPPORTING_COLOR_1));
         UIManager.put("nimbusLightBackground", new ColorUIResource(DesignConstants.BACKGROUND_COLOR));
-        UIManager.put("nimbusOrange", new ColorUIResource(DesignConstants.ACCENT_COLOR));
+        UIManager.put("nimbusOrange", new ColorUIResource(DesignConstants.SUPPORTING_COLOR_2));
         UIManager.put("nimbusSelectedText", new ColorUIResource(Color.WHITE));
         UIManager.put("nimbusSelectionBackground", new ColorUIResource(DesignConstants.PRIMARY_COLOR));
         UIManager.put("text", new ColorUIResource(DesignConstants.TEXT_COLOR));
@@ -54,7 +51,7 @@ public class GlobalTheming {
         UIManager.put("Button.background", new ColorUIResource(DesignConstants.PRIMARY_COLOR));
         UIManager.put("Button.foreground", new ColorUIResource(DesignConstants.TEXT_COLOR));
         UIManager.put("Button.border", DesignConstants.DEFAULT_BORDER);
-        UIManager.put("Button.hover", new ColorUIResource(DesignConstants.HOVER_COLOR));
+        UIManager.put("Button.hover", new ColorUIResource(DesignConstants.SUPPORTING_COLOR_3));
 
         // Apply global styling for JPanel
         UIManager.put("Panel.background", new ColorUIResource(DesignConstants.BACKGROUND_COLOR));

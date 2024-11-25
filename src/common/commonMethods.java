@@ -48,10 +48,19 @@ public class commonMethods {
     /**
      * Displays an error dialog with the given message.
      * 
+     * @param type
      * @param message the error message to display
      */
-    public static void showErrorDialog(String message) {
-        JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
+   public static void showDialogPane(String type, String message) {
+        int messageType;
+        messageType = switch (type.toLowerCase()) {
+            case "error" -> JOptionPane.ERROR_MESSAGE;
+            case "warning" -> JOptionPane.WARNING_MESSAGE;
+            case "information" -> JOptionPane.INFORMATION_MESSAGE;
+            default -> JOptionPane.PLAIN_MESSAGE;
+        };
+        
+        JOptionPane.showMessageDialog(null, message, type, messageType);
     }
 
     /**
